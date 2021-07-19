@@ -144,10 +144,17 @@ p.page-header a:hover, p.page-header a:focus {
 
 ul.navbar-nav li {
     font-family: var(--text) !important;
-    text-transform: uppercase;
-    font-weight: 600;
-    padding: 0 20px;
-    font-size: 2.2rem;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    padding: 0 20px !important;
+    font-size: 2.2rem !important;
+}
+
+ul.navbar-nav li button {
+    font-family: var(--text) !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    font-size: 2.2rem !important;
 }
 
 ul.navbar-nav {
@@ -158,7 +165,7 @@ ul.navbar-nav {
     color: #FFF !important;
 }
 
-a.nav-link:after {
+a.nav-link:after, .nav-item button:after {
     content: '';
     width: 100%;
     bottom: 0;
@@ -170,8 +177,13 @@ a.nav-link:after {
     transition: all 0.3s;
 }
 
-a.nav-link:hover:after, a.nav-link:focus:after {
+a.nav-link:hover:after, a.nav-link:focus:after,
+.nav-item button:hover:after, .nav-item button:focus:after {
     opacity: 1 !important;
+}
+
+a.nav-link:hover, a.nav-link:focus {
+    color: #FFF !important;
 }
 
 td a {
@@ -339,4 +351,32 @@ input#Image {
     display: block;
     margin: 10px auto 0;
     border: 2px solid var(--blue) !important;
+}
+
+.Google {
+    background-image: url(../img/icons/google.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    border: none;
+}
+
+.Facebook {
+    background-image: url(../img/icons/facebook.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    border: none;
+    margin: 0 30px;
+}
+
+.Twitter {
+    background-image: url(../img/icons/twitter.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    border: none;
 }
