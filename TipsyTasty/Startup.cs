@@ -44,6 +44,13 @@ namespace TipsyTasty
                     options.ClientSecret = Configuration.GetSection("Authentication:Google")["ClientSecret"];
                 });
 
+            services.AddAuthentication()
+                .AddFacebook(options =>
+                {
+                    options.AppId = Configuration.GetSection("Authentication:Facebook")["AppId"];
+                    options.AppSecret = Configuration.GetSection("Authentication:Facebook")["AppSecret"];
+                });
+
             services.AddControllersWithViews();
         }
 
