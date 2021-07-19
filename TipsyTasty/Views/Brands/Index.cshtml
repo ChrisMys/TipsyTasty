@@ -1,0 +1,67 @@
+﻿@model IEnumerable<TipsyTasty.Models.Brand>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p class="page-header"><a asp-action="Create">Add a new bottle</a></p>
+
+<table class="table sortable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgeStatment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AlcoholContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @if (item.Image != null)
+                {
+                    <img class="img-thumbnail" src="~/img/brands/@item.Image" alt="Product Image" />
+                }
+                else
+                {
+                    <img class="img-thumbnail" src="~/img/brands/placeholder.png" alt="Placeholder Image" />
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @if (item.AgeStatment != null)
+                {
+                    @Html.DisplayFor(modelItem => item.AgeStatment) <span> year(s) old</span>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AlcoholContent) <span>%</span>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.Name)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">View</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

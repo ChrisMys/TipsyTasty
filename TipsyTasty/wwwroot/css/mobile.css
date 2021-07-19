@@ -1,0 +1,28 @@
+﻿@media (min-width: 768px) {
+
+    html {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    li.nav-item {
+        text-align: center;
+    }
+
+    li.nav-item:after {
+        content: none;
+    }
+
+    footer.footer ul li {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    li.footer-list:after {
+        content: none;
+    }
+
+}

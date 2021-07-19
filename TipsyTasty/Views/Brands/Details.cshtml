@@ -1,0 +1,33 @@
+﻿@model TipsyTasty.Models.Brand
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            @if (Model.Image != null)
+            {
+                <img src="~/img/brands/@Model.Image" alt="Product Image" class="img-thumbnail" />
+            }
+        </div>
+        <div class="col-sm-6">
+            <h1>@Html.DisplayFor(model => model.Name)</h1>
+            <h2>
+                @if (Model.AgeStatment != null)
+                {
+                    @Html.DisplayFor(model => model.AgeStatment) <span> year(s) old -</span>
+                }
+
+                @Html.DisplayFor(model => model.AlcoholContent) <span>% ABV</span>
+            </h2>
+            <h3>@Html.DisplayFor(model => model.Category.Name)</h3>
+        </div>
+    </div>
+</div>
+
+<div>
+    <p class="btn-class"><a class="btn btn-custom" asp-action="Index">Go Back</a></p>
+</div>

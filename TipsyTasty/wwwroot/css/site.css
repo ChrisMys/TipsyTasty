@@ -1,0 +1,342 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+:root {
+    --grey: #5D5C61;
+    --lightgrey: #938e94;
+    --lightblue: #7395AE;
+    --blue: #12649f;
+    --sand: #b0a295;
+    --text: 'Roboto', Roboto, sans-serif;
+    --heading: 'Raleway', Raleway, sans-serif;
+}
+
+::-moz-selection, ::selection {
+    background: var(--blue);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5% !important;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: var(--text) !important;
+    font-size: 1.8rem;
+    background-color: #D9D9D9 !important;
+}
+
+header, footer {
+    background-color: var(--grey) !important;
+    color: #D9D9D9 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading) !important;
+    font-size: 2.5rem;
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  padding: 40px 0;
+}
+
+td img {
+    width: 100px;
+}
+
+.table td, .table th {
+    padding: 10px;
+    vertical-align: top;
+    border-top: none !important;
+}
+
+.flex-jc-ac {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 214.25px)
+}
+
+p.page-header {
+    font-family: var(--heading) !important;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 30px 0;
+    text-align: right;
+}
+
+p.page-header a {
+    padding: 10px;
+    background: var(--sand);
+    color: white;
+    border-radius: 12px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+p.page-header a:hover, p.page-header a:focus {
+    opacity: 0.5;
+    color: #0056b3;
+}
+
+.brand img {
+    width: 300px;
+}
+
+.brand {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.brand:hover, .brand:focus, td a:hover, td a:focus {
+    opacity: 0.7;
+}
+
+ul.navbar-nav li {
+    font-family: var(--text) !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0 20px;
+    font-size: 2.2rem;
+}
+
+ul.navbar-nav {
+    justify-content: flex-end;
+}
+
+.nav-link {
+    color: #FFF !important;
+}
+
+a.nav-link:after {
+    content: '';
+    width: 100%;
+    bottom: 0;
+    height: 3px;
+    background: var(--sand);
+    display: block;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a.nav-link:hover:after, a.nav-link:focus:after {
+    opacity: 1 !important;
+}
+
+td a {
+    padding: 5px 10px;
+    background: #5daaec;
+    color: white;
+    border-radius: 12px;
+    margin: 0 5px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a.btn-custom {
+    background: #5daaec;
+    color: white;
+}
+
+p.btn-class {
+    text-align: right;
+}
+
+tr td:last-child {
+    text-align: right;
+}
+
+input.btn.btn-primary {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input.btn.btn-primary:hover, input.btn.btn-primary:focus {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0.7;
+}
+
+.form-group img {
+    max-width: 20%;
+}
+
+h1.page-header {
+    font-family: var(--heading) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.pb-3, .py-3 {
+    padding-bottom: 0 !important;
+}
+
+table.table tbody tr:nth-child(2n + 1) {
+    background: #FFF;
+}
+
+table.table tr td {
+    vertical-align: middle;
+}
+
+.table th {
+    cursor: pointer;
+    color: #000;
+    font-family: var(--heading);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+footer.footer p {
+    color: #FFF !important;
+    margin: 0;
+    text-align: center;
+}
+
+footer.footer .footer-list a {
+    color: var(--sand);
+}
+
+.pg-home a {
+    text-decoration: underline;
+    color: var(--blue);
+}
+
+.footer-list a:hover, .footer-list a:focus, .pg-home a:hover, .pg-home a:focus {
+    opacity: 0.5;
+}
+
+.pg-home {
+    padding: 40px 0 140px !important;
+}
+
+li.nav-item:after {
+    content: '|';
+    position: absolute;
+    top: 8%;
+    right: -2%;
+}
+
+li.nav-item:last-child:after {
+    content: none;
+}
+
+li.nav-item {
+    position: relative;
+}
+
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 2rem;
+    line-height: 1;
+    background-color: #FFF;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+footer.footer ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li.footer-list {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+}
+
+li.footer-list:after {
+    content: '-';
+    margin: 0 6px 0 10px;
+}
+
+li.footer-list:last-child:after {
+    content: none;
+}
+
+td a {
+    color: #FFF !important;
+    text-decoration: none !important;
+    background-color: var(--sand);
+}
+
+.img-thumbnail {
+    border: none !important;
+}
+
+.form-control, .btn {
+    font-size: 1.8rem !important;
+}
+
+input#Image {
+    padding: 10px;
+    height: 53px;
+}
+
+.btn-custom {
+    color: #FFF !important;
+    text-decoration: none !important;
+}
+
+.btn-custom:hover, .btn-custom:focus {
+    opacity: 0.7;
+}
+
+.form-group img {
+    display: block;
+    margin: 10px auto 0;
+    border: 2px solid var(--blue) !important;
+}

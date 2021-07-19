@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TipsyTasty", "TipsyTasty\TipsyTasty.csproj", "{46FAC991-5136-4652-9A8E-BC4BFBDC0720}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BB0F6337-2E8F-40C9-B56F-A3C8E9E8F1E7}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46FAC991-5136-4652-9A8E-BC4BFBDC0720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46FAC991-5136-4652-9A8E-BC4BFBDC0720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46FAC991-5136-4652-9A8E-BC4BFBDC0720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46FAC991-5136-4652-9A8E-BC4BFBDC0720}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4157E5E4-5B81-4F7E-A864-4E10B5AD4023}
+	EndGlobalSection
+EndGlobal
