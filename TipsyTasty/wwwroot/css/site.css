@@ -360,6 +360,7 @@ input#Image {
     height: 40px;
     width: 40px;
     border: none;
+    background-color: #d9d9d9;
 }
 
 .Facebook {
@@ -370,6 +371,7 @@ input#Image {
     width: 40px;
     border: none;
     margin: 0 30px;
+    background-color: #d9d9d9;
 }
 
 .Twitter {
@@ -379,4 +381,5 @@ input#Image {
     height: 40px;
     width: 40px;
     border: none;
+    background-color: #d9d9d9;
 }

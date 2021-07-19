@@ -11,7 +11,7 @@ using TipsyTasty.Models;
 
 namespace TipsyTasty.Controllers
 {
-    [Authorize(Roles = "Customer")]
+    [Authorize]
     public class CollectionsController : Controller
     {
         private readonly ApplicationDbContext _context;

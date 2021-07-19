@@ -13,7 +13,7 @@ using TipsyTasty.Models;
 
 namespace TipsyTasty.Controllers
 {
-    [Authorize(Roles = "Customer")]
+    [Authorize]
     public class BrandsController : Controller
     {
         private readonly ApplicationDbContext _context;
