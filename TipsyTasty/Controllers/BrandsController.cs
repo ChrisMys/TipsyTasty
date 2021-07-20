@@ -50,6 +50,7 @@ namespace TipsyTasty.Controllers
         }
 
         // GET: Brands/Create
+        [Authorize(Roles = "Administrator")]
         public IActionResult Create()
         {
             ViewData["CategoryId"] = new SelectList(_context.Categories.OrderBy(c => c.Name), "Id", "Name");
@@ -61,6 +62,7 @@ namespace TipsyTasty.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Create([Bind("Id,Image,Name,AgeStatment,AlcoholContent,CategoryId")] Brand brand, IFormFile Image)
         {
             if (ModelState.IsValid)

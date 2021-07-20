@@ -5,8 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-[Authorize]
+@if (User.IsInRole("Administrator"))
+{
 <p class="page-header"><a asp-action="Create">Add a new bottle</a></p>
+}
 
 <table class="table sortable">
     <thead>
