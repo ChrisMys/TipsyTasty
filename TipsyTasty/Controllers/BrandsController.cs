@@ -27,7 +27,7 @@ namespace TipsyTasty.Controllers
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Brands.Include(b => b.Category).OrderBy(b => b.Name);
-            return View(await applicationDbContext.ToListAsync());
+            return View("Index", await applicationDbContext.ToListAsync());
         }
 
         // GET: Brands/Details/5

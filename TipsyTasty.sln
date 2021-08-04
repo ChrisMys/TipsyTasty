@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipsyTastyTests", "TipsyTastyTests\TipsyTastyTests.csproj", "{836E3649-C157-4D30-95F5-1882E5C53092}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{46FAC991-5136-4652-9A8E-BC4BFBDC0720}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46FAC991-5136-4652-9A8E-BC4BFBDC0720}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46FAC991-5136-4652-9A8E-BC4BFBDC0720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{836E3649-C157-4D30-95F5-1882E5C53092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{836E3649-C157-4D30-95F5-1882E5C53092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{836E3649-C157-4D30-95F5-1882E5C53092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{836E3649-C157-4D30-95F5-1882E5C53092}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
