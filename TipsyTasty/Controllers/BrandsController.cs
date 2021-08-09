@@ -54,7 +54,7 @@ namespace TipsyTasty.Controllers
         public IActionResult Create()
         {
             ViewData["CategoryId"] = new SelectList(_context.Categories.OrderBy(c => c.Name), "Id", "Name");
-            return View();
+            return View("Create");
         }
 
         // POST: Brands/Create
@@ -103,7 +103,7 @@ namespace TipsyTasty.Controllers
                 return NotFound();
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories.OrderBy(c => c.Name), "Id", "Name", brand.CategoryId);
-            return View(brand);
+            return View("Edit", brand);
         }
 
         // POST: Brands/Edit/5
@@ -177,7 +177,7 @@ namespace TipsyTasty.Controllers
                 return NotFound();
             }
 
-            return View(brand);
+            return View("Delete", brand);
         }
 
         // POST: Brands/Delete/5

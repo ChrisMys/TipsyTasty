@@ -78,5 +78,40 @@ namespace TipsyTastyTests
             CollectionAssert.AreEqual(orderedProducts, model);
         }
 
+        // CREATE (GET)
+        [TestMethod]
+        public void CreateViewLoads()
+        {
+            // Arrange - logic is happening in TestInitialize
+            // Act
+            var result = (ViewResult)controller.Create();
+            // Assert
+            Assert.AreEqual("Create", result.ViewName);
+        }
+
+        // EDIT (GET)
+        [TestMethod]
+        public void EditViewLoads()
+        {
+            // Arrange - logic is happening in TestInitialize
+            // Act
+            var result = controller.Edit(101);
+            var viewResult = (ViewResult)result.Result;
+            // Assert
+            Assert.AreEqual("Edit", viewResult.ViewName);
+        }
+
+        // DELETE (GET)
+        [TestMethod]
+        public void DeleteViewLoads()
+        {
+            // Arrange - logic is happening in TestInitialize
+            // Act
+            var result = controller.Delete(101);
+            var viewResult = (ViewResult)result.Result;
+            // Assert
+            Assert.AreEqual("Delete", viewResult.ViewName);
+        }
+
     }
 }
