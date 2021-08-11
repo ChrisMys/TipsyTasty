@@ -78,7 +78,7 @@ namespace TipsyTastyTests
             CollectionAssert.AreEqual(orderedProducts, model);
         }
 
-        // CREATE (GET)
+        // CREATE #1 (GET THE VIEW)
         [TestMethod]
         public void CreateViewLoads()
         {
@@ -89,7 +89,33 @@ namespace TipsyTastyTests
             Assert.AreEqual("Create", result.ViewName);
         }
 
-        // EDIT (GET)
+        // CREATE #2 (POST WAS SUCCESSFUL)
+        [TestMethod]
+        public void PostCreateBrand()
+        {
+            // Arrange - logic is happening in TestInitialize
+            // Act
+            Brand newBrand = new Brand { Image = null, Id = 104, Name = "Test", AgeStatment = "4", AlcoholContent = 45, CategoryId = 100 };
+            var result = controller.Create(newBrand, null);
+            // Assert
+            var brand = _context.Brands.Where(b => b.Name == newBrand.Name).FirstOrDefault();
+            Assert.IsNotNull(brand);
+        }
+
+        // CREATE #3 (POST WAS NOT SUCCESSFUL)
+        [TestMethod]
+        public void PostCreateBrandFailure()
+        {
+            // Arrange - logic is happening in TestInitialize
+            // Act
+            Brand newBrand = new Brand { Image = null, Id = 105, AgeStatment = "4", AlcoholContent = 45, CategoryId = 100 };
+            var result = controller.Create(newBrand, null);
+            // Assert
+            var brand = _context.Brands.Where(b => b.Name == newBrand.Name).FirstOrDefault();
+            Assert.IsNull(brand);
+        }
+
+        // EDIT #1 (GET THE VIEW)
         [TestMethod]
         public void EditViewLoads()
         {
@@ -101,7 +127,19 @@ namespace TipsyTastyTests
             Assert.AreEqual("Edit", viewResult.ViewName);
         }
 
-        // DELETE (GET)
+        // EDIT #2 (NOT FOUND)
+        [TestMethod]
+        public void GetEditNotFoundWithNoId()
+        {
+            // Arrange - logic is happening in TestInitialize
+            // Act
+            var result = controller.Edit(null);
+            var notFoundResult = (NotFoundResult)result.Result;
+            // Assert
+            Assert.AreEqual(404, notFoundResult.StatusCode);
+        }
+
+        // DELETE #1 (GET THE VIEW)
         [TestMethod]
         public void DeleteViewLoads()
         {
@@ -111,6 +149,42 @@ namespace TipsyTastyTests
             var viewResult = (ViewResult)result.Result;
             // Assert
             Assert.AreEqual("Delete", viewResult.ViewName);
+        }
+
+        // DELETE #2 (NOT FOUND)
+        [TestMethod]
+        public void GetDeleteNotFoundWithNoId()
+        {
+            // Arrange - logic is happening in TestInitialize
+            // Act
+            var result = controller.Delete(null);
+            var notFoundResult = (NotFoundResult)result.Result;
+            // Assert
+            Assert.AreEqual(404, notFoundResult.StatusCode);
+        }
+
+        // DETAILS #1 (GET THE VIEW)
+        [TestMethod]
+        public void DetailViewLoads()
+        {
+            // Arrange - logic is happening in TestInitialize
+            // Act
+            var result = controller.Details(101);
+            var viewResult = (ViewResult)result.Result;
+            // Assert
+            Assert.AreEqual("Details", viewResult.ViewName);
+        }
+
+        // DETAILS #2 (NOT FOUND)
+        [TestMethod]
+        public void GetDetailsNotFoundWithNoId()
+        {
+            // Arrange - logic is happening in TestInitialize
+            // Act
+            var result = controller.Details(null);
+            var notFoundResult = (NotFoundResult)result.Result;
+            // Assert
+            Assert.AreEqual(404, notFoundResult.StatusCode);
         }
 
     }

@@ -46,7 +46,7 @@ namespace TipsyTasty.Controllers
                 return NotFound();
             }
 
-            return View(brand);
+            return View("Details", brand);
         }
 
         // GET: Brands/Create
@@ -85,7 +85,7 @@ namespace TipsyTasty.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories.OrderBy(c => c.Name), "Id", "Name", brand.CategoryId);
-            return View(brand);
+            return View("Create", brand);
         }
 
         // GET: Brands/Edit/5
